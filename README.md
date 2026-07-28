@@ -15,6 +15,7 @@ If you enter a domain name instead of an IP address, the program automatically r
 ## ✨ Features
  
 - 🌐 Accepts either an IP address or a domain name as input
+- 📝 Accepts the choice of UDP, TCP or both
 - 🔁 Scans all TCP ports from 1 to 65534
 - 📄 Saves the list of open ports to a text file named `<ip>_ports.txt`
 - 🐍 Pure Python — uses only the built-in `socket` module
@@ -51,16 +52,12 @@ Open ports found during the scan are saved to a file like `127.0.0.1_ports.txt` 
  
 ## ⚠️ Known Limitations
  
-- **Socket reuse bug**: the same socket object is reused across all 65,534 connection attempts instead of creating a new one per port. This can cause the scan to behave unreliably partway through on some systems.
-- **30-second timeout per port** makes a full scan (1–65534) extremely slow — a complete run could take a very long time, especially against ports that don't respond.
-- **Port 65535 is never scanned** due to the range used (`range(1, 65535)` stops one short).
-- No multithreading — ports are checked one at a time, sequentially.
-- Only supports TCP scanning (not UDP).
+- **CLI ARGUMENTS**: there is no support for command line arguments yet.
+
 ---
  
 ## 🧩 Planned Improvements
  
-- [ ] Add UDP scanning support
 - [ ] Add command-line arguments (e.g. specify port range) instead of scanning the full range every time
 ---
  
