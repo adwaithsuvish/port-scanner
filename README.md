@@ -60,9 +60,6 @@ Open ports found during the scan are saved to a file like `127.0.0.1_ports.txt` 
  
 ## 🧩 Planned Improvements
  
-- [ ] Create a fresh socket for each port instead of reusing one
-- [ ] Lower the timeout and add multithreading for realistic scan speed
-- [ ] Fix the range to include port 65535
 - [ ] Add UDP scanning support
 - [ ] Add command-line arguments (e.g. specify port range) instead of scanning the full range every time
 ---
